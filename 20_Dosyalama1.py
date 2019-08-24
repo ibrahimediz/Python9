@@ -5,7 +5,7 @@ def dosyaAc(adres="defter.csv"):
     else:
         dosya = open(adres,"w+")
     return dosya
-
+    
  
 def dosyaKayit(ifade):
     dosya = dosyaAc("defter2.csv")
