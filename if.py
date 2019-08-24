@@ -1,8 +1,30 @@
-# sayi = int(input("Sayıyı Giriniz"))
-# if sayi%2 == 0:
-#     print("Sayı Çifttir")
-# else:
-#     print("Sayı Tektir")
+sayi = int(input("Sayıyı Giriniz"))
+if sayi%2 == 0:
+    print("Sayı Çifttir")
+else:
+    print("Sayı Tektir")
+
+
+sayi = int(input("Parametre Giriniz"))
+if sayi == 1 and sayi>0 or sayi !=2:
+    print("parametre 1")
+elif sayi == 2:
+    print("parametre 2")
+else:
+    print("yanlış parametre")
+
+
+liste = [1,2]
+liste2 = liste
+if liste is liste2:
+    print("Doğru")
+metin = "BEŞİKTAŞ"
+if 3 in liste:
+
+
+
+
+
 
 """
 kullanıcıdan alınan sifre verisinin girilip 

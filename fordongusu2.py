@@ -6,6 +6,8 @@ for i in range(2,sayi1):
         print("Asal Değildir")
 if Asal:
     print("Asaldır")
+
+
     
 
 

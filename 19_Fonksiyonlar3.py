@@ -1,6 +1,6 @@
 
-# fonk2 = lambda a,b : fonk(a)*fonk(b)
-# fonk3 = lambda x : x[0]
+fonk2 = lambda a,b : fonk(a)*fonk(b)
+fonk3 = lambda x : x[0]
 
 # print(fonk3("BEŞİKTAŞ"))
 # print(fonk(2))
@@ -29,20 +29,20 @@
 # fonk()
 # print(a)
 
-# def outerFunc(a):
-#     a = 2
-#     def innerFunc(a):
-#         a = a * 2
-#         return a
-#     a =  innerFunc(a)
-#     return a
-# print(outerFunc(2))
+def outerFunc(a):
+    a = 2
+    def innerFunc(a):
+        a = a * 2
+        return a
+    a =  innerFunc(a)
+    return a
+print(outerFunc(2))
 
 
-# def saydir(metin):
-#     print(metin)
-#     if not len(metin) == 1:
-#         saydir(metin[1:])  
+def saydir(metin):
+    print(metin)
+    if not len(metin) == 1:
+        saydir(metin[1:])  
    
 
 

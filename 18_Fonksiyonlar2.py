@@ -5,6 +5,8 @@ def Fonksiyon(*args):
     return sonuc
 print("a")
 
+Fonksiyon(b=2,1,2,3,4,5)
+
 def Fonksiyon2(**kwargs):
     liste = []
     for key,value in kwargs.items():

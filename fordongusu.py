@@ -4,14 +4,15 @@
 #     c = a+b
 #     print(c)
 #     a,b = b,c
+
 # print("Bitti")
 
 
 
-import random
-sinir = 1000
-hak = 10
-sayi = random.randint(0,sinir)
+# import random
+# sinir = 1000
+# hak = 10
+# sayi = random.randint(0,sinir)
 
 # for i in range(1,hak):
 #     tahmin = int(input("Tahmininizi giriniz"))
@@ -48,5 +49,5 @@ sayi = random.randint(0,sinir)
 # liste = []
 
 
-metin = "BEŞİKTAŞ"
-print(list(metin))
+# metin = "BEŞİKTAŞ"
+# print(list(metin))

@@ -1,8 +1,8 @@
 # def Fonk():
 #     pass
 
-def KareAl(a):
-    print(a**2)
+# def KareAl(a):
+#     print(a**2)
 
 # def KareAl2(a):
 #     return a**2
