@@ -5,7 +5,7 @@ def dosyaAc(adres="defter.csv"):
     else:
         dosya = open(adres,"w+")
     return dosya
-
+    
 def Listele():
     dosya = dosyaAc("deneme.csv")
     liste = dosya.readlines()
