@@ -23,11 +23,11 @@
 
 
 class Kedi():
-    #sınıf özelliği (class attribute)
+   # sınıf özelliği (class attribute)
     tur = "evcilHayvan"
     
     def __init__(self,adi="",tuyuzunlugu="",cins=""):
-        #örnek özellik (instance attribute)
+        # örnek özellik (instance attribute)
         self.tuyuzunlugu = tuyuzunlugu
         self.ismi = adi
         self.cins = cins
@@ -40,3 +40,4 @@ class Kedi():
     def tuyTara(self):
         print(self.ismi," tüyü tarandı")
 
+duman = Kedi()

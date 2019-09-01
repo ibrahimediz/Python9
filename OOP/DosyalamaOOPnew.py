@@ -1,12 +1,43 @@
 import os
 class DosyaUtility():
-   
+    __uygulama = []
+    uygulamaSay = 0
     dosyaUzanti = ".csv"
     def __init__(self,adres = "defter",**kwargs):
         self.adres = os.getcwd()+os.sep+adres+self.dosyaUzanti
+        self.__uygulama.append(self.adres)
+        self.uygulamaSayisi()
         self.dosya = None
         self.dosyaAc()
+        self.__dosyaIsmi = adres+self.dosyaUzanti
         self.parametreler = kwargs
+    
+    @staticmethod
+    def PiSayisi():
+        return 22/7
+
+    @property
+    def dosyaismi(self):
+        return self.__dosyaIsmi
+
+    @dosyaismi.setter
+    def dosyaismi(self,yeni_deger):
+        if yeni_deger == 5:
+            self.__dosyaIsmi = yeni_deger
+        return self.__dosyaIsmi
+    
+
+    @dosyaismi.deleter
+    def dosyaismi(self):
+        del self.__dosyaIsmi
+
+    
+
+
+    @classmethod
+    def uygulamaSayisi(cls):
+        pass
+
 
     def dosyaAc(self):
         if os.path.exists(self.adres):
@@ -16,7 +47,43 @@ class DosyaUtility():
         self.dosya = dosya
 
     def arama(self):
-        pass
+        self.dosyaAc()
+        giris = input("Aramak istediğiniz kelime ya da sayıyı giriniz")
+        self.dosya.seek(0)
+        liste = self.dosya.readlines()
+        aramasonuc = []
+        for item in liste:
+            for i in item.split(";"):
+                if giris.upper() in i.upper():
+                    aramasonuc.append(item)
+                    break
+        self.yazdir(aramasonuc)
+
+
+
+    # def arama2(self):
+    #     self.dosyaAc()
+    #     giris = input("Aramak istediğiniz kelime ya da sayıyı giriniz")
+    #     self.dosya.seek(0)
+    #     liste = self.dosya.readlines()
+    #     aramasonuc = []
+    #     for item in liste:
+    #         for i in item.split(";"):
+    #             if giris.upper() in i.upper():
+    #                 aramasonuc.append(item)
+    #                 break
+    #     self.yazdir(aramasonuc)
+
+    
+        
+             
+    def yazdir(self,liste):
+        for i in range(0,len(liste)):
+            metin = "{}-".format((i+1))
+            for item in liste[i].split(";"):
+                metin+= item + "-"
+            print(metin)
+
 
     def Listele(self):
         print("-"*20)
