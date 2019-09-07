@@ -1,17 +1,36 @@
 import os
 class DosyaUtility():
     __uygulama = []
-    uygulamaSay = 0
     dosyaUzanti = ".csv"
     def __init__(self,adres = "defter",**kwargs):
         self.adres = os.getcwd()+os.sep+adres+self.dosyaUzanti
-        self.__uygulama.append(self.adres)
-        self.uygulamaSayisi()
+        self._isim = adres
         self.dosya = None
         self.dosyaAc()
-        self.__dosyaIsmi = adres+self.dosyaUzanti
+        self.uygulamaYaz()
         self.parametreler = kwargs
     
+    @property
+    def isim(self):
+        return self._isim
+
+    @isim.setter
+    def isim(self,yeni_deger):
+        indis = self.__uygulama.index(self._isim)
+        self.__uygulama[indis] = yeni_deger
+        self._isim = yeni_deger
+        adres = os.getcwd()+os.sep+self._isim+self.dosyaUzanti
+        self.dosya.close()
+        os.rename(self.adres,adres)
+        self.adres = adres
+
+    
+
+
+    def uygulamaYaz(self):
+        self.__uygulama.append(self._isim)
+
+
     @staticmethod
     def PiSayisi():
         return 22/7
@@ -31,13 +50,11 @@ class DosyaUtility():
     def dosyaismi(self):
         del self.__dosyaIsmi
 
-    
-
-
     @classmethod
-    def uygulamaSayisi(cls):
-        pass
-
+    def uygulamaListele(cls):
+        print("Dosya Listesi")
+        for item in cls.__uygulama:
+            print(item)
 
     def dosyaAc(self):
         if os.path.exists(self.adres):

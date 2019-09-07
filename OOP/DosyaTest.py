@@ -1,9 +1,13 @@
 from DosyalamaOOPnew import DosyaUtility
-test1 = DosyaUtility(adres = "deneme",ALANLAR=["Adı","Soyadı","Telefon"])
+test1 = DosyaUtility(adres = "Kayıt1",ALANLAR=["Adı","Soyadı","Telefon"])
 test2 = DosyaUtility(adres = "musteri",ALANLAR=["MüşteriID","MüşteriAdı","MüşteriSoyadı","Tutar"])
-# print(test1.dosya.readlines())
-# test1.idu(param=1)
-
+DosyaUtility.uygulamaListele()
+test1.isim = "Kayıt4"
+print(test1.isim)
+DosyaUtility.uygulamaListele()
+# indis = DosyaUtility.uygulama.index("deneme")
+# DosyaUtility.uygulama[indis] = "Kayit1"
+# DosyaUtility.uygulamaListele()
 
 
 
